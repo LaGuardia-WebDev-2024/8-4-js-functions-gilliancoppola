@@ -3,16 +3,29 @@ void setup(){
   size(600, 400); 
   background(255,255,255);
 
+drawName();
+drawName();
+drawName();
+drawName();
+
+}
+
+//🟢Draw Function - Runs on Repeat
+
+var drawName = function(){
   var textX = random(50, 550);
   var textY = random(50, 350);
   var yourName = "Your Name";
 
   fill(241,9,55);
   textSize(40);
-  text("Hiiii, " + yourName, textX, textY);
-}
+  text("Hiiii, " + "Gillian", textX, textY);
 
-//🟢Draw Function - Runs on Repeat
+
+};
+
+
+
 draw = function(){  
 
 };
@@ -29,6 +42,14 @@ var drawStar = function(){
   text("⭐",starX, starY);
 };
 
+var drawFace = function(){
+  var starSize = random(10,20);
+  var starX = mouseX + random(-12,12);
+  var starY = mouseY + random(-12,12);
+  textSize(starSize);
+  text("🤑",starX, starY);
+};
+
 //🟡mouseClicked Function - will run when the mouse is clicked
 mouseClicked = function(){
   var myText = "x: " + mouseX + "\ny: " + mouseY;
@@ -37,4 +58,9 @@ mouseClicked = function(){
   drawStar();
   drawStar();
   drawStar();
+  drawStar();
+  
+
+  drawFace();
+  drawFace();
 };
